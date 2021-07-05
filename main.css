@@ -1,0 +1,61 @@
+#book {
+	height: 100vh;
+	background-image: url("background-black.jpg");
+	background-repeat: repeat;
+	background-size: 75vh;
+}
+
+@keyframes left-to-right{
+	from{transform: rotateY(15deg);}
+	to{transform: rotateY(180deg);}
+}
+@keyframes right-to-left{
+	from{transform: rotateY(-15deg);}
+	to{transform: rotateY(-180deg);}
+}
+
+#odd, #even{
+	position: relative;
+	height: 90vh;
+	top: 5vh;
+	bottom: 5vh;
+	padding: 0 0 0 0;
+	perspective: 725vh;
+	z-index: 1;
+}
+
+#odd1, #odd2, #even1, #even2{
+	position: absolute;
+	height: 90vh;
+	background-image: linear-gradient(to right, lightgreen, white, lightgreen);
+}
+
+#odd1, #odd2{
+	transform-origin: right center;
+}
+#even1, #even2{
+	transform-origin: left center;
+}
+
+
+
+#odd{
+	margin-left: 15vw;	
+}
+#odd1:hover{
+	transform: rotateY(15deg);
+}
+#odd2{
+	z-index: -1;
+}
+
+
+#even{
+	margin-right: 15vw;
+}
+#even1:hover{
+	transform: rotateY(-15deg);
+}
+#even2{
+	z-index: -1;
+}
